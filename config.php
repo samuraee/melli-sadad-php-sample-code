@@ -15,9 +15,9 @@ $TerminalId = "YOUR_TERMINAL_ID";   // TerminalKey
 $useBankTest = false; // برای تست با درگاه بانک تست این مقدار را true کنید
 
 if ($useBankTest == true) {
-    $paymentRequestURL    = 'https://banktest.ir/gateway/melli/payment-request';
-    $gatewayURL           = 'https://banktest.ir/gateway/melli/purchase';
-    $verifyTransactionURL = 'https://banktest.ir/gateway/melli/verify';
+    $paymentRequestURL    = 'https://sandbox.banktest.ir/melli/sadad.shaparak.ir/VPG/api/v0/Request/PaymentRequest';
+    $gatewayURL           = 'https://sandbox.banktest.ir/melli/sadad.shaparak.ir/VPG/Purchase';
+    $verifyTransactionURL = 'https://sandbox.banktest.ir/melli/sadad.shaparak.ir/VPG/api/v0/Advice/Verify';
 } else {
     $paymentRequestURL    = 'https://sadad.shaparak.ir/vpg/api/v0/Request/PaymentRequest';
     $gatewayURL           = 'https://sadad.shaparak.ir/VPG/Purchase';
