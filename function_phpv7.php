@@ -3,9 +3,9 @@
 function encrypt_pkcs7 ($str, $key)
 {
     $key = base64_decode($key);
-    $cipherText = OpenSSL_encrypt($str, "DES-EDE3", $key, OPENSSL_RAW_DATA);
-
-    return base64_encode($cipherText);
+    // Don't pass the output to the base64_encode function as it's already in base64.
+    $encryptedData = openssl_encrypt($str, 'des-ede3', $key, 0);
+    return $encryptedData;
 }
 
 //Send Data to gateway
